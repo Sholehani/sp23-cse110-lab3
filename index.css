@@ -1,0 +1,177 @@
+body{
+    background-color: rgb(195, 212, 165);     /* rgb() */               
+}
+
+/* Using media query to change background color when certain screen size is made */
+@media only screen and (max-width: 1000px) {
+    body {
+        background-color: lightblue;
+    }
+}
+
+/* Using 3rd Party Font */
+@font-face {
+    font-family: "3rdPartyFont";
+    src: url("media/BrunoAceSC-Regular.ttf");
+}
+
+/* Using 3rd Party Font */
+
+html{
+    font-family: "3rdPartyFont", "Bitstream Vera Serif", serif;
+}
+
+h1{
+    color: #050505                            /* #FFFFFF */
+}
+
+h2{
+    background: hsl(150deg, 30%, 60%);        /* hsl() */
+    text-align: center;                          /* text-align */
+}
+
+h3{
+    text-decoration-color: blueviolet;        /* color */
+    text-decoration: underline;                 /* text-decoration */
+}
+
+h3#Agenda {
+    color: rebeccapurple;                     /* ID Selector */
+}
+
+
+p{
+
+    color:rgb(28, 21, 77);                    /* text color */
+}
+
+/* Box with auto properties */
+.box {                                           /* class selector */
+
+    width: 350px;                                /* absolute unit */
+    height: 150px;
+    margin: auto;
+    padding: 25px;
+    border: 5px solid black;
+
+    text-align: center;                         
+}
+
+/* Box with long properties */
+.alternate {
+    box-sizing: border-box;
+    display: inline-block;                      /* display: inline-block */
+
+    /* Border */
+    border-width: 10px;
+    border-radius: 5cm;
+    border-style: dotted;
+    border-color: cornflowerblue;
+
+    /* Margin */
+    margin-right: 11em;                          /* relative unit */
+    margin-left: 10em;
+    margin-top: 15em;
+    margin-bottom: 2em;
+    
+    /* Padding */
+    padding-bottom: 10px;
+    padding-top: 10px;
+    padding-right: 5in;                          /* absolute unit */
+    padding-left: 5cm;                           /* absolute unit */
+    
+}
+
+/* Box with short properties */
+.alternate2 {
+    box-sizing: border-box;
+
+    display: inline;                            /* display: inline */
+
+    /* Border */
+    border: 20px solid purple;
+
+    /* Margin */
+    margin: 10vw 10vw 10vw 50vw;                /* relative unit */
+    
+    /* Padding */
+    padding: 10dvh 2dvh 10dvh 10dvh;           /* relative unit */
+}
+
+/* Box with custom sizing */
+.alternate3 {
+    box-sizing: border-box;
+    border: 20px solid rgb(205, 220, 176);
+    margin: auto;                
+    padding:10px 5px 10px 10px;      
+
+    display:flex;                                       /* display: flex */
+
+    flex-direction: column;
+
+
+    
+    height: 30%;
+
+    width: 70%;
+    
+    position: sticky;                                   /* position: sticky */
+    bottom: 10px;
+
+}
+
+/* Box with custom max sizing */
+.alternate4 {
+    box-sizing: border-box;
+    border:10px ridge palevioletred;
+    margin: auto;                
+    padding:10px 5px 10px 10px;      
+    
+    max-height: 10%;
+
+    max-width: 5%;
+
+    position: relative;top: 40px; left: 40px;           /* position: relative */
+}
+
+.button {
+    width: 10em;
+    height: 5ex;
+    background-color: rgb(206, 179, 246);
+    border: 2px solid rgb(49, 0, 94);
+    border-radius: 10px;
+    color: black;
+    cursor: pointer;
+}
+
+/* Using button:hover */
+.button:hover {
+    background-color: bisque;
+}
+
+/* Using button:active */
+.button:active {
+    box-shadow: 2px 2px 5px #b48369;
+}
+
+/* Using display: flex */
+div#flex-test{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 2rem;
+    flex-grow: 4;
+}
+
+div#grid-test{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+    grid-auto-rows: 100px;
+    padding: 2rem;
+}
+
+
+
+
+
