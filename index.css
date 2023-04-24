@@ -15,28 +15,59 @@ body{
     src: url("media/BrunoAceSC-Regular.ttf");
 }
 
-/* Using 3rd Party Font */
-
-html{
+/* Using 3rd Party Font and Universal Selector*/
+* {
     font-family: "3rdPartyFont", "Bitstream Vera Serif", serif;
 }
 
-h1{
+/* Changes background of all links with target attribute*/
+a[target]{                                                         /* Attribute Selector */
+    background-color: green;
+}
+
+/* Changes background color of all section paragraphs*/
+section p{                                                          /* Descendant Combinator */
+    background-color: rgb(217, 227, 218);
+}
+
+/* Changes border color of grid's button */
+div#grid-test > button{                                             /* Child Combinator */
+    border-color: blueviolet;
+}
+
+/* Changes any footers' background that is after an hr element */
+hr ~ footer{                                                         /* General sibling combinator */
+    background: white;
+}
+
+/* Changes font of p element right after auido */
+audio + p{                                                           /* Adjacent sibling combinator */
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+}
+
+/* Changes background of all alt2 boxes */
+div.alternate2{                                                      /* Combining Two Selectors */
+    background-color: beige;
+}
+
+
+h1{                                             /* Element Selector */
     color: #050505                            /* #FFFFFF */
 }
 
+/* Changes background color of h2 */
 h2{
     background: hsl(150deg, 30%, 60%);        /* hsl() */
     text-align: center;                          /* text-align */
 }
-
-h3{
+ 
+h3, h4{                                         /* Selector List */
     text-decoration-color: blueviolet;        /* color */
     text-decoration: underline;                 /* text-decoration */
 }
 
-h3#Agenda {
-    color: rebeccapurple;                     /* ID Selector */
+h3#Agenda {                                     /* ID Selector */
+    color: rebeccapurple;                     
 }
 
 
@@ -145,7 +176,7 @@ p{
 }
 
 /* Using button:hover */
-.button:hover {
+button:hover {                                          /* Pseudo-class Selector */
     background-color: bisque;
 }
 
